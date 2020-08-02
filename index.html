@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ToDo List</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="container">
+	<select class="themeSwitch">
+		<option value="1">Night</option>;
+		<option value="2">Day</option>
+	</select>
+	
+	<header>
+		<div class="headerText">
+			<h1>Personal</h1>
+			<p class="taskCount">Временный текст</p>
+		</div>	
+		<div class="editButton">
+			<a href="#"><img src="img/trash@3x.png" alt="trash" class="editButton__Img"></a>
+			<a href="#"><img src="img/Shape.png" alt="newTask" class="editButton__Img editButton__Img2"></a>
+		</div>
+	</header>
+	
+	<div class="taskList">
+		<input type="checkbox" id="taskList__checkbox" class="taskList__checkbox">
+		<label for="taskList__checkbox"></label>
+		<div class="taskList__description">
+			<h2>Пример задачи</h2>
+			<p class="taskList__description__date">Сегодня 10:00 pm</p>
+		</div>	
+	</div>
+	
+	<div class="newTask">
+		<input type="text" class="newTask__input" placeholder="Добавьте задачу...">
+	</div>
+	
+</div>
+	
+	
+<script src="script.js"></script>
+</body>
+</html>
