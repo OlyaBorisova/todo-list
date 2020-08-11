@@ -9,36 +9,36 @@
 <body>
 
 <div class="container">
-	<select class="themeSwitch">
-		<option value="1">Night</option>;
-		<option value="2">Day</option>
-	</select>
 	
-	<header>
-		<div class="headerText">
-			<h1>Personal</h1>
-			<p class="taskCount">Временный текст</p>
+	<header class="header">
+		<div class="header__text">
+			<h1 class="header__heading">Personal</h1>
+			<p class="task-count">Временный текст</p>
 		</div>	
-		<div class="editButton">
-			<a href="#"><img src="img/trash@3x.png" alt="trash" class="editButton__Img"></a>
-			<a href="#"><img src="img/Shape.png" alt="newTask" class="editButton__Img editButton__Img2"></a>
+		<div class="edit-button">
+			<a href="#"><img src="img/trash@3x.png" alt="trash" class="edit-button__img"></a>
+			<a href="#"><img src="img/Shape.png" alt="edit-button" class="edit-button__img edit-button__img2"></a>
 		</div>
 	</header>
 	
-	<div class="taskList">
-		<input type="checkbox" id="taskList__checkbox" class="taskList__checkbox">
-		<label for="taskList__checkbox"></label>
-		<div class="taskList__description">
-			<h2>Пример задачи</h2>
-			<p class="taskList__description__date">Сегодня 10:00 pm</p>
-		</div>	
+	<div class="task-list">
+
 	</div>
 	
-	<div class="newTask">
-		<input type="text" class="newTask__input" placeholder="Добавьте задачу...">
-	</div>
+	<div class="clear"></div>
+
+	<form class="new-task">
+		<input type="text" class="new-task__input" placeholder="Добавьте задачу...">
+	</form>
+
+	<button class="add-task__button"><img src="img/Combined Shape.png" alt="add-task" class="add-task__image add-task__image_visible"><img src="img/icon.png" alt="add-task_confirm" class="add-task__image add-task__image2"></button>
 	
 </div>
+
+<select class="theme-switch">
+	<option value="1">Night</option>;
+	<option value="2">Day</option>
+</select>
 	
 	
 <script src="script.js"></script>
