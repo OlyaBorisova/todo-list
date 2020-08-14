@@ -1,3 +1,4 @@
+
 let themeSwitch = document.querySelector('.theme-switch');
 themeSwitch.addEventListener('change', themeSwitchFun);
 
@@ -22,7 +23,7 @@ function themeSwitchFun() {
 
 let addTaskButton = document.querySelector('.add-task__button');
 let addTaskInput = document.querySelector('.new-task');
-
+let count = 1;
 
 addTaskButton.addEventListener('click', addTaskBtnActive);
 addTaskInput.addEventListener('submit', addTaskBtnActive);
@@ -37,12 +38,37 @@ function addTaskBtnActive(event) {
 		
 		function addTask() {
 			let task = document.querySelector('.new-task__input').value;
+
+			let carrentDate = new Date();
+
+			let carrentYear = carrentDate.getFullYear();
+
+			let carrentMonth = carrentDate.getMonth() + 1;
+			let realMonth = carrentMonth < 10 ? '0' + carrentMonth : carrentMonth;	
+
+			let carrentDay = carrentDate.getDate();
+			let realDay = carrentDay < 10 ? '0' + carrentDay : carrentDay;
+
+			let carrentHour = carrentDate.getUTCHours() 
+			let realHour = carrentHour < 10 ? '0' + carrentHour : carrentHour;
+
+			let carrentMinute = carrentDate.getMinutes();
+			let realMinute = carrentMinute < 10 ? '0' + carrentMinute : carrentMinute;
+
+			let dateForToDo = realDay + '.' + realMonth + '.' + carrentYear;
+			let timeForToDo = realHour + ':' + realMinute;
+				
 			let taskDescription = `<div class="task">
-				<input type="checkbox" id="task-list__checkbox" class="task-list__checkbox">
-				<label for="task-list__checkbox"></label>
+				<input type="checkbox" id="task-list__checkbox${count}" class="task-list__checkbox">
+				<label for="task-list__checkbox${count++}"></label>
 				<div class="task-list__description">
 					<h2 class="task-list__heading">${task}</h2>
-					<p class="task-list__date">Сегодня 10:00 pm</p>
+					<div class="task-list__date">
+					<div class="task-list__image task-list__image1"></div>
+					<span>${dateForToDo}</span>
+					<div class="task-list__image task-list__image2"></div>
+					<span>${timeForToDo}</span>
+				</div>
 				</div>	
 			</div>`;
 			document.querySelector('.task-list').innerHTML += taskDescription;	
@@ -53,7 +79,11 @@ function addTaskBtnActive(event) {
 
 	addTaskButton.classList.toggle('add-task__button_active');
 	event.preventDefault();
-	//document.querySelector('.new-task__input').focus() // тут проблема
+	
+	setTimeout(() => {
+		document.querySelector('.new-task__input').focus(); 
+	}, 1000);
+	
 }
 
 /*--------------*/

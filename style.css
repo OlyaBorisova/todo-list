@@ -142,7 +142,28 @@ body {
 	font-size: 14px;
 	line-height: 16px;
 	margin-bottom: 16px;
-	opacity: 0.5;
+	opacity: 1;
+	color: rgba(255, 255, 255, 0.5);
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+}
+
+.task-list__image {
+	width: 16px;
+	height: 16px;
+	margin: 0 3px;
+}
+
+.task-list__image1 {
+	background: url(img/Calendar.png) no-repeat;
+	background-size: contain;
+}
+
+.task-list__image2 {
+	background: url(img/Icon2.png) no-repeat;
+	background-size: contain;
 }
 
 .clear{

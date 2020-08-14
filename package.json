@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/OlyaBorisova/ToDo-List#readme",
   "dependencies": {
+    "moment": "^2.27.0",
     "parcel-bundler": "^1.12.4"
   }
 }
